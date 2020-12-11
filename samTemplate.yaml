@@ -16,7 +16,6 @@ Resources:
         ApiEvent:
           Type: Api
           Properties:
-            RestApiId: !Ref ApiGatewayApi
             Path: /thumbnail
             Method: post
       Environment:
