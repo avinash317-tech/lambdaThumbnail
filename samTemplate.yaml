@@ -13,11 +13,11 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::586737838680:role/lambda_basic_execution'
       Events:
-        apiEvent:
+        ApiEvent:
           Type: Api
           Properties:
             RestApiId: !Ref ApiGatewayApi
-            path: /thumbnail
+            Path: /thumbnail
             Method: post
       Environment:
         variables:
