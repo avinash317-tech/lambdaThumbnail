@@ -13,9 +13,10 @@ Resources:
       Timeout: 30
       Role: 'arn:aws:iam::586737838680:role/lambda_basic_execution'
       Events:
-        getAZsAPI:
-          Type: API
+        apiEvent:
+          Type: Api
           Properties:
+            RestApiId: !Ref ApiGatewayApi
             path: /thumbnail
             Method: post
       Environment:
