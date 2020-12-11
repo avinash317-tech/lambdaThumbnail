@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8
+  build:
+    commands:
+      - mvn install
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket pipeline-ap-south-1 --output-template-file outputSamTemplate.yaml
+
+artifacts:
+  files:
+    - target/thumbnail-1.0.0.jar
+    - samTemplate.yaml
+    - outputSamTemplate.yaml
+

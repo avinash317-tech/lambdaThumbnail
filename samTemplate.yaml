@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A sample SAM template for deploying Lambda functions.
+
+Resources:
+  MyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.amazonaws.lambda.thumbnail.Handler::handleRequest
+      Runtime: java8
+      CodeUri: target/thumbnail-1.0.0.jar
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::586737838680:role/lambda_basic_execution'
+      Events:
+        getAZsAPI:
+          Type: API
+          Properties:
+            path: /thumbnail
+            Method: post
+      Environment:
+        variables:
+          Region: ap-south-1
+
