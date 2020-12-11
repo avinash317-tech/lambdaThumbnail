@@ -3,7 +3,7 @@ Transform: 'AWS::Serverless-2016-10-31'
 Description: A sample SAM template for deploying Lambda functions.
 
 Resources:
-  MyFunction:
+  lambdaThumbnail:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.amazonaws.lambda.thumbnail.Handler::handleRequest
