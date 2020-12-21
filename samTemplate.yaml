@@ -11,14 +11,10 @@ Resources:
       CodeUri: target/thumbnail-1.0.0.jar
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::586737838680:role/lambda_basic_execution'
       Events:
         ApiEvent:
           Type: Api
           Properties:
             Path: /thumbnail
             Method: post
-      Environment:
-        variables:
-          Region: ap-south-1
 
