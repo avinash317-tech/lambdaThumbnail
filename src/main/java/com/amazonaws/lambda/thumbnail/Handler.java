@@ -50,8 +50,8 @@ import com.google.gson.JsonObject;
 public class Handler implements RequestHandler<Object, ResponseModel> {
 
 	private ResponseModel responseModel;
-	private AWSCredentials credentials = new BasicAWSCredentials("AKIAZ2A5XKXJLH2VE244",
-			"YJjH/fwe62yDWqf976m1oaGCRKfEkaBvmFYK3b8n");
+	private AWSCredentials credentials = new BasicAWSCredentials("access key",
+			"secret key");
 	private AmazonS3 s3Client = new AmazonS3Client(credentials);
 	final float MAX_WIDTH = 100;
 	final float MAX_HEIGHT = 100;
